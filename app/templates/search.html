@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{
+            list-style: none;
+        }
+        #logo > img{
+            float: left;
+        }
+        #up > li{
+            float: left;
+            padding: 5px;
+        }
+        #search_btn > p{
+            float: right;
+            margin-right: 300px;
+            margin-top: -52px;
+        }
+    </style>
+    <script src="../static/css/common.css"></script>
+</head>
+<body>
+
+<div>
+    <div id="logo">
+        <img style="margin-left: 200px" src="{{ url_for('static',filename='img/p4.png') }}">
+        <img style="margin-top: 61px;margin-left: 36px" src="{{ url_for('static',filename='img/p5.png') }}">
+    </div>
+
+    <div id="logo_right">
+        <div id="up">
+            <li>热点搜索:</li>
+            {% for hot in hots %}
+                <li>{{ hot.name }}</li>
+            {% endfor %}
+
+        </div>
+        <div id="search_btn">
+            <input style="height: 15px;width: 334px" type="text" name="keyword">
+            <input style="background: forestgreen;margin-left: -47px" type="button" value="搜索">
+            <p>配送至,全国满百包邮</p>
+        </div>
+    </div>
+
+
+</div>
+
+</body>
+</html>
+
+

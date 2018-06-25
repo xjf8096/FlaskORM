@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #cat > li{
+            float: left;
+            padding: 20px;
+            margin-left: 70px;
+            line-height: 6px;
+            text-align: center;
+        }
+        #nav{
+            width: 1351px;
+            height: 40px;
+            background: greenyellow;
+            margin-top: 57px;
+        }
+    </style>
+</head>
+<body>
+<div id="nav">
+    <div id="first" class="clear">
+        <ul id="cat">
+            {% for category in categories %}
+                <li>{{ category.nav_name }}</li>
+{#                <ul class="second">#}
+{#                {%for cate in cates %}#}
+{#                  <li>{{}}</li>#}
+{#                {% endfor %}#}
+{#                </ul>#}
+            {% endfor %}
+        </ul>
+     <img style="width: 1351px;margin-top: -6px" src="{{ url_for('static',filename='img/hongti.png') }}">
+
+
+
+    </div>
+</div>
+</body>
+</html>

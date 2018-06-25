@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block page_title %}
+        {% endblock %}
+    </title>
+
+    {% block page_css %}
+    {% endblock %}
+
+    {% block page_jq %}
+    {% endblock %}
+</head>
+<body>
+<div>
+    <div id="head">
+        {% block page_head %}
+        {% endblock %}
+    </div>
+
+    <div id="contend">
+        {% block page_contend %}
+        {% endblock %}
+    </div>
+
+    <div id="footer">
+        {% block page_footer %}
+        {% endblock %}
+    </div>
+</div>
+</body>
+</html>

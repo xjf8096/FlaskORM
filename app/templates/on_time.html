@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .ontime{
+            margin-top: 472px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <ul class="ontime" class="clear">
+        <img src = "{{ url_for('static',filename='img/mango.png') }}">
+        {% for shop in shops %}
+        <li>{{ shop.name }}</li>
+        <li>{{ shop.title }}</li>
+        <li>${{ shop.price }}</li>
+        <li>{{ shop.detail }}</li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>
